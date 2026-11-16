@@ -1,0 +1,38 @@
+/* src/styles/theme.css */
+
+:root {
+    /* 1. Semantic App Tokens (Your single source of truth) */
+    --color-flame-50: #fff3e6;
+    --color-flame-100: #ffe0c2;
+    --color-flame-200: #ffc285;
+    --color-flame-500: #fd7e14;
+    /* Core Flame Orange */
+    --color-flame-600: #e06500;
+    /* Hover / Active state */
+    --color-flame-800: #994400;
+    /* High-contrast text on light orange */
+
+    /* 2. Map App Tokens to Bootstrap 5.3 Global Theme Variables */
+    --bs-primary: var(--color-flame-500);
+    --bs-primary-rgb: 253, 126, 20;
+    --bs-primary-text-emphasis: var(--color-flame-800);
+    --bs-primary-bg-subtle: var(--color-flame-50);
+    --bs-primary-border-subtle: var(--color-flame-200);
+
+    /* 3. Update global link and focus ring colors to match */
+    --bs-link-color: var(--color-flame-600);
+    --bs-link-hover-color: var(--color-flame-800);
+    --bs-focus-ring-color: rgba(253, 126, 20, 0.25);
+}
+
+/* Bootstrap compiles .btn-primary with static hex values, so map it to our tokens */
+.btn-primary {
+    --bs-btn-bg: var(--color-flame-500);
+    --bs-btn-border-color: var(--color-flame-500);
+    --bs-btn-hover-bg: var(--color-flame-600);
+    --bs-btn-hover-border-color: var(--color-flame-600);
+    --bs-btn-active-bg: var(--color-flame-800);
+    --bs-btn-active-border-color: var(--color-flame-800);
+    --bs-btn-disabled-bg: var(--color-flame-200);
+    --bs-btn-disabled-border-color: var(--color-flame-200);
+}
